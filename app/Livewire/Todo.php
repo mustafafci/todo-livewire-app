@@ -29,6 +29,8 @@ class Todo extends Component
 
         $this->reset(['name']);
         session()->flash('success', 'Created Successfully');
+
+        $this->resetPage();
     }
 
     public function destroy(TodoModel $todo)
