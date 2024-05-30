@@ -1,10 +1,4 @@
 <div id="todos-list">
-    @session('delete-status')
-        <span class="text-green-500 text-xs">{{ session('delete-status') }}</span>
-    @endsession
-    @session('toggle-status')
-        <span class="text-green-500 text-xs">{{ session('toggle-status') }}</span>
-    @endsession
     @foreach ($todos as $todo)
         <div wire:key="{{ $todo->id }}"
             class="todo mb-5 card px-5 py-6 bg-white col-span-1 border-t-2 border-blue-500 hover:shadow">
